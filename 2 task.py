@@ -18,3 +18,17 @@ users = [
   { "id": '8', "name": 'Simon Peterson', "age": 30 },
   { "id": '9', "name": 'Daniel Cane', "age": 51 },
 ]
+
+def get_user_average_age(a):
+  result = float(sum(b['age'] for b in a) / len(a))
+  return result
+
+average_age = get_user_average_age(users)
+print(average_age)
+
+
+def get_users_names(c):
+  names_list = [item['name'] for item in c if 'name' in item]
+  return sorted(names_list)
+  
+print(get_users_names(users))
